@@ -98,7 +98,7 @@
 # ##print string in upper case .upper()
 # print(("hei there").upper())
 
-# ##title() prints 1st letter capital all other in small
+# ##title() prints 1st character capital all other in small
 # print(("how u doing").title()) #output : How U Doing
 
 # ##count() counts how many times repeated ##count is case sensitive
