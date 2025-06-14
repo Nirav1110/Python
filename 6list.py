@@ -41,7 +41,7 @@ fruits = ['mango','grasps']
 
 # ##extend method
 # fruits.extend(fruits1) ##all fruits1 will be added into the fruits list
-# print(fruits)
+# print(fruits) 
 # print(fruits1)
 
 # fruits.append(fruits1) ##['mango', 'apple', 'grasps', 'watermellon', 'pineapple', 'banana', ['pineapple', 'banana']] ##adds list into list
@@ -236,12 +236,17 @@ num = list(range(1,11)) ##here list is pythons built in type
 
 
 ##exercise 6: make a function our input have how many list inside it
-okay = [1,2,3,[1,2],['word'," "]] 
+# okay = [1,2,3,[1,2],['word'," "]] 
 
-def list_count(l):
-    count = 0
-    for i in okay:
-        if type (i) == list :
-            count +=1
-    return count
-print(list_count(okay))
+# def list_count(l):
+#     count = 0
+#     for i in okay:
+#         if type (i) == list :
+#             count +=1
+#     return count
+# print(list_count(okay))
+
+
+##sum()
+l = [22,33,11,45,8,21]
+print(sum(l))
