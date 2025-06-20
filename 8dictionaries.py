@@ -170,4 +170,6 @@ user['fav_movies']=fav_movies
 user['fav_songs']=fav_songs
 
 for key,value in user.items():
-    print(f"{key}:{value}" )
+    print(f"{key}:{value}")
+
+

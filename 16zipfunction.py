@@ -1,0 +1,3 @@
+##zip function
+user_id = ['user1','user2','user3']
+names = ['kanan','nirv','mihal']
