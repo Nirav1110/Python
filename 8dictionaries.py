@@ -157,19 +157,25 @@
 
 
 ##exercise : ask user his name,age,fav_movies , fav_songs 
-user = {}
+# user = {}
 
-name = input("Enter your name : ") 
-age = input("Enter your age : ") 
-fav_movies = input("Enter your fav movies seprated by coma : ").split(",")
-fav_songs = input("Enter your fav songs seprated by coma : ").split(",") 
+# name = input("Enter your name : ") 
+# age = input("Enter your age : ") 
+# fav_movies = input("Enter your fav movies seprated by coma : ").split(",")
+# fav_songs = input("Enter your fav songs seprated by coma : ").split(",") 
 
-user['name']=name
-user['age']=age
-user['fav_movies']=fav_movies
-user['fav_songs']=fav_songs
+# user['name']=name
+# user['age']=age
+# user['fav_movies']=fav_movies
+# user['fav_songs']=fav_songs
 
-for key,value in user.items():
-    print(f"{key}:{value}")
+# for key,value in user.items():
+#     print(f"{key}:{value}")
+
+############----------------------------
+###example :
+example = [('a',1),('b','a'),('c',3)] ##if list have tuples like this we cann directly convert it to the dictionary
+print(dict(example))  #### {'a': 1, 'b': 'a', 'c': 3}
+
 
 
