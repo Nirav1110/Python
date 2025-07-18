@@ -50,14 +50,89 @@
 # print(l3)
 
 ########################-------------------------------exercise:
-class Laptop2 :
-    def __init__(self,name,price,model):
-        self.name = name
-        self.price = price
-        self.model = model
-        self.combine = name  + ' ' + model
-    def discount(self,num):
-        return self.price*num - self.price*(num/100)
+# class Laptop2 :
+#     def __init__(self,name,price,model):
+#         ####instance variables
+#         self.name = name
+#         self.price = price
+#         self.model = model
+#         self.combine = name  + ' ' + model
+#     def discount(self,num):
+#         return self.price*num - self.price*(num/100)
 
-l6 = Laptop2('lenovo',50000,'yoga')
-print(l6.discount(10))
+# l6 = Laptop2('lenovo',50000,'yoga')
+# print(l6.discount(10))
+
+##-----------------------class variables: 
+# class Circle :
+#     pi = 3.14
+#     def __init__(self,radius):
+#         self.radius = radius
+#     def cacl_circumference(self):
+#         return 2*Circle.pi*self.radius
+
+# c = Circle(4)
+# c1 = Circle(5)
+
+# print(c.cacl_circumference())
+
+
+# class Laptop3 :
+#     discounts = 10 
+#     def __init__(self,name,price,model):
+#         ####instance variables
+#         self.name = name
+#         self.price = price
+#         self.model = model
+#         self.combine = name  + ' ' + model
+#     def discount(self):
+#         ####here if we write Laptop3.discounts than if we change discounts ##l6.discounts = 50## value it wont apply it will use only intial value that's 10
+#         return self.price*self.discounts - self.price*(self.discounts/100)
+
+# l6 = Laptop3('lenovo',10000,'yoga')
+# l6.discounts = 50
+# print(l6.__dict__)
+# print(l6.discount())
+
+###############-----exercise : 
+# class Person2 :
+#     count_instance = 0 
+#     def __init__(self,first_name):
+#         Person2.count_instance += 1
+#         self.first_name = first_name
+
+# p3 = Person2('name')
+# p4 = Person2('123')
+# p5 = Person2('wi')
+# print(Person2.count_instance)
+
+
+####----------------diffrence between class methods and instance methods
+class Person3 :
+    count_instance = 0 ##class variables/ class attribute
+    def __init__(self,first_name,last_name,age): ##init method is a constructor
+        Person3.count_instance += 1
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age= age
+
+    @classmethod
+    def from_string(cls,string):
+        first,last,age =  string.split(',')
+        return cls(first,last,age)
+         
+    @classmethod ###decorator from python
+    def count_instances(cls):
+        return f"You have created {cls.count_instance} instances of {cls.__name__} class"
+         
+    def full_name(self): ##instance method
+        return f"{self.first_name} {self.last_name}"
+
+    def is_adult(self): ##instance method 
+        return self.age > 18
+
+p3 = Person3('nirv','parmar',22)
+p4 = Person3('mihal','parmar',2)
+# print(Person3.count_instances())
+p10 = Person3.from_string('rajshree,bhavsaar,23')
+print(p10.full_name())
