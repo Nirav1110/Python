@@ -2,7 +2,7 @@
 ##-we use it because limitation of lists,lists are not enough to represent real data.
 ##dictionari : unordered collection of data in key : value pair.
 
- 
+
 ##how to create dictionaries
 # dic = { 'name' : 'nirv' , 'age' : 22}
 # print(dic)
@@ -14,7 +14,7 @@
 # print(user1)
 
 # ##imp : how to access your data in dictionarie
-# ##Note : there's no indexing in dictionaries 
+# ##Note : there's no indexing in dictionaries
 # print(user1['name']) ##this way we can access data ;output : kanan
 # print(user1['age'])
 
@@ -22,9 +22,9 @@
 ##what we can store in dictionarie
 ##we can store anything -numbers,strings,list,dictionarie,
 # user_info = {
-#     'name' : 'Mihal', 
+#     'name' : 'Mihal',
 #     'age'  : 4,
-#     'fav_movies' : ['365 days','iron man','thor']    
+#     'fav_movies' : ['365 days','iron man','thor']
 # }
 # print(user_info['fav_movies'])
 
@@ -36,7 +36,7 @@
 #     'user2' : {
 #         'name' : 'kanan',
 #         'age' : 22
-#     },   
+#     },
 # }
 # print(users)
 
@@ -49,13 +49,13 @@
 ##in keyword and iteration in dictionarie
 # if 'love' in user_info2 :
 #     print('present')
-# else : 
+# else :
 #     print('not present ')
 
-# ##check if particular value exist 
+# ##check if particular value exist
 # if 'rohit' in user_info2.values() :
 #     print('value present')
-# else : 
+# else :
 #     print('value not present ')
 
 
@@ -63,7 +63,7 @@
 # for i in user_info2 : ##it will print all key of user_info2
 #     print(i)
 
-# for i in user_info2.values(): ##it will print values 
+# for i in user_info2.values(): ##it will print values
 #     print(i)
 
 ##values method
@@ -81,21 +81,21 @@
 # for i,j in user_info2.items() :
 #     print(f"the key is {i} and it's value is {j}")
 
-##add and delete data 
+##add and delete data
 # user_info2['fav_songs'] = ['song1','song2']
 # user_info2['singers'] = ['uravashi','shreya','aishwarya','love quin']
 # print(user_info2)
 
-##pop method : in pop u have to pass atleast one argument u cant keep it empty like list 
+##pop method : in pop u have to pass atleast one argument u cant keep it empty like list
 # popped_item = user_info2.pop('singers')  ##['uravashi', 'shreya', 'aishwarya', 'love quin']
 # print(user_info2) ##singers removed : {'love': 'nolove', 'name': 'rohit', 'age': 24, 'fav_songs': ['song1', 'song2']}
 # print(f"Popped items : {popped_item}")
 
-##pop item method : for randomly delete any 
+##pop item method : for randomly delete any
 # popitem_method = user_info2.popitem()
 # print(f"randomly popped any item : {popitem_method}")
 
-##update method  
+##update method
 # more_info = {
 #     'name': 'kanan', ##both user_info2 and more_info have key name but when we update it user_info2 name rohit will become kanan
 #     'state': 'gujarat',
@@ -121,7 +121,7 @@
 
 ##clear : it will clear the dictionary
 # f.clear()
-# print(f) ##{} 
+# print(f) ##{}
 
 ##copy method
 # d1 = d.copy()
@@ -138,7 +138,7 @@
 # def cube(num):
 #     k = {}
 #     for i in range(1,num+1):
-#         k[i] = i ** 3 
+#         k[i] = i ** 3
 #     return k
 
 # n3 = int(input("Enter a number : "))
@@ -156,13 +156,13 @@
 # print(word_count(name))
 
 
-##exercise : ask user his name,age,fav_movies , fav_songs 
+##exercise : ask user his name,age,fav_movies , fav_songs
 # user = {}
 
-# name = input("Enter your name : ") 
-# age = input("Enter your age : ") 
+# name = input("Enter your name : ")
+# age = input("Enter your age : ")
 # fav_movies = input("Enter your fav movies seprated by coma : ").split(",")
-# fav_songs = input("Enter your fav songs seprated by coma : ").split(",") 
+# fav_songs = input("Enter your fav songs seprated by coma : ").split(",")
 
 # user['name']=name
 # user['age']=age
@@ -174,8 +174,9 @@
 
 ############----------------------------
 ###example :
-example = [('a',1),('b','a'),('c',3)] ##if list have tuples like this we cann directly convert it to the dictionary
+example = [
+    ("a", 1),
+    ("b", "a"),
+    ("c", 3),
+]  ##if list have tuples like this we cann directly convert it to the dictionary
 print(dict(example))  #### {'a': 1, 'b': 'a', 'c': 3}
-
-
-

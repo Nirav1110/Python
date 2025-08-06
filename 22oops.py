@@ -7,7 +7,7 @@
 
 # class Person : ###acc to convection u should keep class 1st letter capital it's not rule u can write in small letter to
 #     def __init__(self, first_name,last_name,age): ###by default we pass 1st argument in init is self(self represents our object)(in place of self u can write any name but acc to convection write self)
-#         ##instance variables 
+#         ##instance variables
 #         print('init method / constructor get called')
 #         self.first_name = first_name
 #         self.last_name= last_name
@@ -42,7 +42,7 @@
 
 # p3 = Person1('kanu','raaji',22)
 # print(p3.full_name())
-# print(Person1.full_name(p3)) ##this and above are same  
+# print(Person1.full_name(p3)) ##this and above are same
 
 ####---------we can write like this below also methods of list class
 # l3 = [1,2,3]
@@ -63,7 +63,7 @@
 # l6 = Laptop2('lenovo',50000,'yoga')
 # print(l6.discount(10))
 
-##-----------------------class variables: 
+##-----------------------class variables:
 # class Circle :
 #     pi = 3.14
 #     def __init__(self,radius):
@@ -78,7 +78,7 @@
 
 
 # class Laptop3 :
-#     discounts = 10 
+#     discounts = 10
 #     def __init__(self,name,price,model):
 #         ####instance variables
 #         self.name = name
@@ -94,9 +94,9 @@
 # print(l6.__dict__)
 # print(l6.discount())
 
-###############-----exercise : 
+###############-----exercise :
 # class Person2 :
-#     count_instance = 0 
+#     count_instance = 0
 #     def __init__(self,first_name):
 #         Person2.count_instance += 1
 #         self.first_name = first_name
@@ -108,31 +108,43 @@
 
 
 ####----------------diffrence between class methods and instance methods
-class Person3 :
-    count_instance = 0 ##class variables/ class attribute
-    def __init__(self,first_name,last_name,age): ##init method is a constructor
+class Person3:
+    count_instance = 0  ##class variables/ class attribute
+
+    def __init__(self, first_name, last_name, age):  ##init method is a constructor
         Person3.count_instance += 1
         self.first_name = first_name
         self.last_name = last_name
-        self.age= age
+        self.age = age
 
     @classmethod
-    def from_string(cls,string):
-        first,last,age =  string.split(',')
-        return cls(first,last,age)
-         
-    @classmethod ###decorator from python
+    def from_string(cls, string):
+        first, last, age = string.split(",")
+        return cls(first, last, age)
+
+    @classmethod  ###decorator from python
     def count_instances(cls):
-        return f"You have created {cls.count_instance} instances of {cls.__name__} class"
-         
-    def full_name(self): ##instance method
+        return (
+            f"You have created {cls.count_instance} instances of {cls.__name__} class"
+        )
+
+    @staticmethod
+    def hello():
+        print("This is static method")
+
+    def full_name(self):  ##instance method
         return f"{self.first_name} {self.last_name}"
 
-    def is_adult(self): ##instance method 
+    def is_adult(self):  ##instance method
         return self.age > 18
 
-p3 = Person3('nirv','parmar',22)
-p4 = Person3('mihal','parmar',2)
+
+p3 = Person3("nirv", "parmar", 22)
+p4 = Person3("mihal", "parmar", 2)
 # print(Person3.count_instances())
-p10 = Person3.from_string('rajshree,bhavsaar,23')
+p10 = Person3.from_string("rajshree,bhavsaar,23")
 print(p10.full_name())
+
+##static method
+### it isn't related with object or instance it has connection with class
+Person3.hello()

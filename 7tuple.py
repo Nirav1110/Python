@@ -2,10 +2,10 @@
 ##tuple can store any data type
 ##tuples are immutable, once tuple is created can't be updated
 
-example = ('hei','kanan','by')
+example = ("hei", "kanan", "by")
 ##no appened ,no insert,no pop ,no remove
 ##when we know that our data is not going to change in that case we use tuple like
-days = ('monday','tuesday','saturday')
+days = ("monday", "tuesday", "saturday")
 ##tuples performance is faster than list that's why we use tuple when our data is not going to change
 
 ##mehods
@@ -16,10 +16,10 @@ days = ('monday','tuesday','saturday')
 
 # print(example[::1])
 
-##example[0]=1  we cant update tuple values like this 
+##example[0]=1  we cant update tuple values like this
 
 ##looping in tuple
-mixed = (1,'two',0.3,'kanan')
+mixed = (1, "two", 0.3, "kanan")
 
 # for i in mixed:
 #     print(i)
@@ -29,14 +29,14 @@ mixed = (1,'two',0.3,'kanan')
 # while i < len(mixed):
 #     print(mixed[i])
 #     i+=1
-    
+
 ##tuple with one element
 # nums = (1) ##this isnt tuple
-# words = ('word1') ## this is also not tuple 
+# words = ('word1') ## this is also not tuple
 # print(type(nums))
 # print(type(words))
 # ##for one elment tuple
-# n = (2,) ##u have to put , 
+# n = (2,) ##u have to put ,
 # word1 = ('nirv',) ##u have to put ,
 # print(type(n))
 # print(type(word1))
@@ -62,7 +62,7 @@ mixed = (1,'two',0.3,'kanan')
 # t = (22,33,11,45,8,21)
 # print(min(t))
 # print(max(t))
-##sum 
+##sum
 # print(sum(t))
 
 ##function returing two values
@@ -75,24 +75,24 @@ mixed = (1,'two',0.3,'kanan')
 
 ##something more about tuples,list,str
 
-nums = tuple(range(1,11)) ##this will create a tuple (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+nums = tuple(range(1, 11))  ##this will create a tuple (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 print(nums)
 
-##tuple to list 
-tup1 = list(nums) ##[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
-str2 = str(tup1) ## this will convert list into string
+##tuple to list
+tup1 = list(nums)  ##[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+str2 = str(tup1)  ## this will convert list into string
 print(tup1)
-print(str2,type(str2)) ##[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <class 'str'>
+print(str2, type(str2))  ##[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <class 'str'>
 
 str1 = str(nums)
-print(str1 , type(str1))    ##(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) <class 'str'>
+print(str1, type(str1))  ##(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) <class 'str'>
 
 
-##summary 
+##summary
 ##functions in tuples
 ##min(),max(),len(),sum()
 ##in tuple we can store any data type
-##in tuple we cant do append,extend,pop,insert, no remove 
+##in tuple we cant do append,extend,pop,insert, no remove
 ##only count and index
 ##we use tuple when we know we're not gonna change values  ##for example days = ('monday','tuesday')
 ##tuples are faster than list

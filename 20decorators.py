@@ -2,7 +2,7 @@
 ### enhance the functionality of other functions
 ### @ use for decorator
 from functools import wraps
-import time ## time module
+import time  ## time module
 
 # def decorator_function(any_function): ####(we can give any name to this function) we give it this name just for understanding purpose
 #     def wrapper_function():
@@ -23,7 +23,7 @@ import time ## time module
 # @decorator_function ###with @ we also use decorator functions : shortcut @:syntactic sugar
 # def func3():
 #     print('This is function 3')
-# func3() 
+# func3()
 
 #### if we pass any argument in this func3(7) now it will give error function because decoratorfunction doesn't expects any argument so now to solve it we use *args and **kwargs
 # def d2(any_function_with_arguments):
@@ -43,7 +43,7 @@ import time ## time module
 # print(add5(10,20))
 
 # ####this still have problem if we print name of add5
-# print(add5.__name__) ###wrapper_accepts_arg it should print add5 
+# print(add5.__name__) ###wrapper_accepts_arg it should print add5
 
 ##so now to solve this problem we import one module
 
@@ -61,7 +61,7 @@ import time ## time module
 # print(func6.__name__) ##func6 now it will print correctly
 
 
-###practice : 
+###practice :
 ##function name : print function data
 # def print_function_data(function):
 #     @wraps(function)
@@ -69,7 +69,7 @@ import time ## time module
 #         print(f"You are calling this {function.__name__} function")
 #         print(f"{function.__doc__}")
 #         return function(*args,**kwargs)
-#     return wrapper 
+#     return wrapper
 
 # @print_function_data
 # def addition(a,b):
@@ -78,13 +78,12 @@ import time ## time module
 # print(addition(4,5))
 
 
-
-###########-----------exercise : calculate time 
+###########-----------exercise : calculate time
 # def calculate_time(func):
 #     @wraps(func)
 #     def wrapper(*args,**kwargs):
 #         print(f"Executing........  {func.__name__} function")
-#         t1 = time.time() 
+#         t1 = time.time()
 #         returnerd_value = func(*args,**kwargs)
 #         t2 = time.time()
 #         totol_time = t2 -t1
@@ -105,31 +104,37 @@ import time ## time module
 #     def wrapper(*args,**kwargs):
 #         if all([type(i) == int for i in args]):
 #             return func(*args,**kwargs)
-#         else : 
+#         else :
 #             return "Invalid args"
 #     return wrapper
+
 
 # @only_int_allowed
 # def add_all(*args):
 #     return sum(args)
 # print(add_all(1,3,4,5,6))
-# print(add_all(1, 2.5, 3)) 
+# print(add_all(1, 2.5, 3))
 ####-----------------------------------------------------------------------------------------------------------------
 #####-------------decorators with arguments
 def only_data_type_allow(data_type):
     def decorator(function):
         @wraps(function)
-        def wrapper(*args,**kwargs):
+        def wrapper(*args, **kwargs):
             if all([type(i) == data_type for i in args]):
-                return function(*args,**kwargs)
+                return function(*args, **kwargs)
             return f"only this {data_type} is allowed"
+
         return wrapper
+
     return decorator
+
 
 @only_data_type_allow(str)
 def string_join(*args):
-    string = ''
+    string = ""
     for i in args:
         string += i
     return string
-print(string_join('hhei','helow','how',2))
+
+
+print(string_join("hhei", "helow", "how", 2))

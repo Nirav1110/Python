@@ -1,13 +1,13 @@
 ##list comprehension
 ##--------------------------------------------------------------------------------------------------
 ##with the list help of list comprehension we can create list in one line
-##create a list of squares from 1 to 10 
+##create a list of squares from 1 to 10
 ##normal method
 # squares = []
 # for i in range(1,11 ):
 #     squares.append(i**2)
 # print(squares)
-##comprehension method in one line  
+##comprehension method in one line
 # squares2 = [i**2 for i in range(1,11)] ##this is called comprehension
 # print(squares2)
 ##--------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@
 ##print 1st letter
 # names = ['Nirav','Mohit','Kanan','Rohit']
 # ##normal way
-# #  
+# #
 # ##exercise : make a function that reverse every element of that list
 # def reverse_string(l):
 #     return [i[::-1] for i in l]
@@ -31,7 +31,7 @@
 # numbers = list(range(1,11))
 # print(numbers)
 
-##print even nums from this list 
+##print even nums from this list
 ##-------------------->noraml long method
 # nums = []
 # for i in numbers :
@@ -42,8 +42,8 @@
 ##-------------------->comperehension method to print even numbers with if statement
 # even_nums = [i for i in range(1,11) if i%2==0] ##direct using range and print even number
 # odd_nums = [i for i in range(1,11) if i%2!=0] ##direct using range and print odd number
-# print(even_nums) 
-# print(odd_nums) 
+# print(even_nums)
+# print(odd_nums)
 # ##-------------------------------------------------------------------------------------------------------------------
 ##--------------------->exercise : make a function which only prints int or float type
 # def int_float(l):
@@ -64,6 +64,10 @@
 ##----------++++++>comprehension method : with if else statement
 # print([ i*2 if i%2==0  else -i for i in range(1,11)])
 # ##-------------------------------------------------------------------------------------------------------------------
-##------------------->list comprehension in nested list 
-example = [[1,2,3],[1,2,3],[1,2,3]] ##create list like this with list comprehension
-print([[i for i in range(1,4)] for j in range(3)])
+##------------------->list comprehension in nested list
+example = [
+    [1, 2, 3],
+    [1, 2, 3],
+    [1, 2, 3],
+]  ##create list like this with list comprehension
+print([[i for i in range(1, 4)] for j in range(3)])

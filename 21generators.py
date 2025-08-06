@@ -21,9 +21,9 @@ import time
 #     print(i)
 
 ##genrator is also sequence
-# 
-# #####write 1st generator with generator function 
-##1.)generator function 
+#
+# #####write 1st generator with generator function
+##1.)generator function
 ##2.)generator comprehension
 
 
@@ -34,21 +34,21 @@ import time
 # for numbers in nums(10): ####our demand is in this loop
 #     print(numbers)
 # ##memory -------->1 than 1 removes and 2 comes at a time only store one single : means in a memory at a time only one number
-# ###next number will be generated when we demand it and our demand is in for loop 
+# ###next number will be generated when we demand it and our demand is in for loop
 
-# ###we tried again but it wont print anything because memory got clear 
-# for numbers in nums(10): 
+# ###we tried again but it wont print anything because memory got clear
+# for numbers in nums(10):
 #     print(numbers)
 
-###because we store it 
+###because we store it
 ##############---------------------exercise : generate sequence of even numbers
 # def even_generator(n):
 #     for i in range(1,n+1):
 #         if i%2==0:
-#             yield i 
+#             yield i
 
-# for i in even_generator(20): ##we can write this loop again and it will generator again because we're generating direclty in loop but if we 
-#     ####done this even = even_generator(20) than on even we can run loop only one time 
+# for i in even_generator(20): ##we can write this loop again and it will generator again because we're generating direclty in loop but if we
+#     ####done this even = even_generator(20) than on even we can run loop only one time
 #     print(i)
 
 ##############--------------------------------------------------------------------------
@@ -68,5 +68,5 @@ import time
 # print(time.time()-t1)
 
 t1 = time.time()
-g = (i**2 for i in range(10000000))    ##10 million
-print(time.time()-t1)
+g = (i**2 for i in range(10000000))  ##10 million
+print(time.time() - t1)

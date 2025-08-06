@@ -6,9 +6,9 @@
 
 # names = ["Nirav",'mihl','kandarap','ab']
 ##### print(max(names))  ##it gives 'mihl' but we want max based on it's length
-##based on legth of string decide which one is max or min 
-# print(max(names,key=lambda item:len(item))) 
-# print(min(names,key=lambda item:len(item))) 
+##based on legth of string decide which one is max or min
+# print(max(names,key=lambda item:len(item)))
+# print(min(names,key=lambda item:len(item)))
 
 #####------------------------------------------->
 # students2 = [
@@ -45,8 +45,7 @@
 
 # ####-----sets sort
 # fruits3 = {'graps','mango','apple','finger'}
-# print(sorted(fruits3)) ##same gives list 
-
+# print(sorted(fruits3)) ##same gives list
 
 
 ####--------------sort complex list or dictionary
@@ -61,7 +60,7 @@
 # print(sorted(guitarist,key= lambda d : d['price'], reverse = True)) ##it will be print in decreasing order of price because of reverse = True
 
 ###################3####################################################################################
-##------------------more about functions 
+##------------------more about functions
 ###----what are doc strings
 ##how to write it
 ##how to see doctstring
@@ -73,7 +72,7 @@
 
 # print(add(1,2))
 # print(add.__doc__) ###how to see doctstring
-##it helps us to know what our function does 
+##it helps us to know what our function does
 ###len , sum , max , min , sorted
 # print(len.__doc__)
 # print(sum.__doc__)
@@ -81,5 +80,5 @@
 # print(min.__doc__)
 # print(sorted.__doc__)
 
-######---- help() : in bracket function name it will tell what that function does 
+######---- help() : in bracket function name it will tell what that function does
 #### print(help(sum))

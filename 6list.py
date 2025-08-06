@@ -6,56 +6,65 @@
 # number = [1,2,3,4]
 # print(number)
 # print(number[2]) ##for accessing individual elements
-# 
+#
 # words = ["Hei","how","you","doing","today?",]
-# print(words) 
+# print(words)
 # print(words[:3]) ##slicing same as a string slicing
-# 
-# mixed = ["hei",12,7.8,None,0] ##None and 0 are diffrent 
+#
+# mixed = ["hei",12,7.8,None,0] ##None and 0 are diffrent
 # print(mixed)
-# 
+#
 # mixed[1]="lucifer" ##for changing value of individual index 1 is index here it will change 12 to "lucifer"
 # print(mixed)
-# 
+#
 # mixed[1:]="nirv" ##it will change mixed as like this ['hei', 'n', 'i', 'r', 'v'] if we give it bigger "niravparmar" output : ['hei', 'n', 'i', 'r', 'v', 'p', 'a', 'r', 'm', 'a', 'r']
 # print(mixed)
-# 
+#
 # mixed[1:]=["luci",11,"clori",99.99,"oggy"] ##output : ['hei', 'luci', 11, 'clori', 99.99, 'oggy']
 # print(mixed)
 #
 
-##how to add items to our list  
-fruits = ['mango','grasps']
+##how to add items to our list
+fruits = ["mango", "grasps"]
 # fruits.append('watermellon') ##append method adds items at the last of the list
 # print(fruits)
 
 # ##other methods to add data
-# ##insert method to add item at anywhere  
+# ##insert method to add item at anywhere
 # fruits.insert(1,'apple') ##it will be added at index 1
 # print(fruits)
 
 # ##how to concate two lists
 # fruits1 = ["pineapple",'banana']
-# # fruits2 = fruits+=fruits1 
+# # fruits2 = fruits+=fruits1
 # # print(fruits2)
 
 # ##extend method
 # fruits.extend(fruits1) ##all fruits1 will be added into the fruits list
-# print(fruits) 
+# print(fruits)
 # print(fruits1)
 
 # fruits.append(fruits1) ##['mango', 'apple', 'grasps', 'watermellon', 'pineapple', 'banana', ['pineapple', 'banana']] ##adds list into list
 # print(fruits)
 
 ##to delete data from list
-vegetables = ["bhindi",'baigan','gobi','cabbage','gobi', "dhaniya",'phuding','kiwi']
+vegetables = [
+    "bhindi",
+    "baigan",
+    "gobi",
+    "cabbage",
+    "gobi",
+    "dhaniya",
+    "phuding",
+    "kiwi",
+]
 # vegetables.pop() ##removes last element from list if not passed index
 # vegetables.pop(1) ##it will remove element of index 1
 # print(vegetables)
 
 ##delete operato or statement but it doesnt matter
-##del 
-# del vegetables[0] ##removes index 0 element 
+##del
+# del vegetables[0] ##removes index 0 element
 # print(vegetables)
 
 ##remove method
@@ -63,7 +72,7 @@ vegetables = ["bhindi",'baigan','gobi','cabbage','gobi', "dhaniya",'phuding','ki
 # vegetables.remove('gobi') ##removes only 1 gobi
 # print(vegetables)
 
-# ##check if any element exists in our list 
+# ##check if any element exists in our list
 # if 'grasps' in vegetables :
 #     print('present')
 # else :
@@ -74,14 +83,14 @@ vegetables = ["bhindi",'baigan','gobi','cabbage','gobi', "dhaniya",'phuding','ki
 # print(vegetables.count('gobi'))
 
 ##sort method
-vegetables.sort() ##sorts in alphabetical order like a,b,c,d
+vegetables.sort()  ##sorts in alphabetical order like a,b,c,d
 # print(vegetables) ##this sort method sorts our original list
 
-number = [13,12,223,0.4,25]
+number = [13, 12, 223, 0.4, 25]
 # number.sort()
 # print(number)
 
-##sorted function 
+##sorted function
 # print(sorted(number)) ##only print in sorted but doesnt change our original list
 
 ##clear() ##empty's our list
@@ -97,20 +106,20 @@ number = [13,12,223,0.4,25]
 ##compare lists we use == , is keyword
 # veg1 = ["bhindi",'baigan','gobi']
 # veg2 = ["bhindi",'baigan','gobi']
-# print(vegetables==fruits) ## == checks only values are same 
+# print(vegetables==fruits) ## == checks only values are same
 # print(veg1==veg2)
 
-# print(veg1 is veg2) ##is checks if both are at same place in our  memory 
+# print(veg1 is veg2) ##is checks if both are at same place in our  memory
 
 ##split() : converts string into list
-#  
+#
 ##join() : converts list into string
 # f = ['n','i','r','v'] ##cant join this [1,'pirav','lover'] //[0,11,1,2] integer
 # print(','.join(f)) ##n,i,r,v
- 
-##loops in list 
+
+##loops in list
 # fruits =  ['hei', 'luci', 11, 'clori', 99.99, 'oggy']
-# for i in fruits : 
+# for i in fruits :
 #     print(i)
 
 # ##while loop
@@ -120,7 +129,7 @@ number = [13,12,223,0.4,25]
 #     i+=1
 
 ##list inside list
-matrix = [[1,2,3],[4,5,6],[7,8,9]] ##2d list
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]  ##2d list
 
 ##for loop print full matrix
 # for i in matrix :
@@ -138,12 +147,12 @@ matrix = [[1,2,3],[4,5,6],[7,8,9]] ##2d list
 ##more about pop method
 # poped_num = num.pop() ##it will store 10 into this ##we can reuse it again
 # print(num) ##[1, 2, 3, 4, 5, 6, 7, 8, 9]
-# print(poped_num) ##10 
+# print(poped_num) ##10
 
 ##index method
 # print(num.index(2)) ##here 2 is not index it's element of num list and index method will print it's index position
 
-##pass list into function 
+##pass list into function
 # def negative_list(l):
 #     negative = []
 #     for i in l :
@@ -153,10 +162,7 @@ matrix = [[1,2,3],[4,5,6],[7,8,9]] ##2d list
 # print(negative_list(num)) ##[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
 
 
-
-
-
-num = list(range(1,11)) ##here list is pythons built in type 
+num = list(range(1, 11))  ##here list is pythons built in type
 ##Exercise 1
 # def square_list(l):
 #     square = []
@@ -166,7 +172,7 @@ num = list(range(1,11)) ##here list is pythons built in type
 
 # print(square_list(num))
 
-##exercise 2 : reverse the list but not with slicing and without using reverse method 
+##exercise 2 : reverse the list but not with slicing and without using reverse method
 # def reverse_list(l):
 #     ulta = []
 #     for i in range(len(l)):
@@ -176,7 +182,7 @@ num = list(range(1,11)) ##here list is pythons built in type
 # okay = [1,2,3,4,5,6,7,8,9,10]
 # print(reverse_list(okay))
 
-# ##with reverse method 
+# ##with reverse method
 # def r_method(l):
 #     l.reverse()
 #     return l
@@ -194,19 +200,19 @@ num = list(range(1,11)) ##here list is pythons built in type
 #     rev = []
 #     for i in string:
 #         rev.append(i[::-1])
-#     return rev  
+#     return rev
 # string = ['abc','dfg','Hei']
 # print(reverse_every(string))
 
-##ex4:  take a list divide them into odd and even numbers 
+##ex4:  take a list divide them into odd and even numbers
 # def odd_even(l):
-#     odd = [] 
+#     odd = []
 #     even = []
 #     for i in l:
 #         if i%2==0:
 #             even.append(i)
 #         else :
-#             odd.append(i)    
+#             odd.append(i)
 #     output = [odd,even]
 #     return output
 
@@ -222,10 +228,10 @@ num = list(range(1,11)) ##here list is pythons built in type
 #         if i in n2:
 #             output.append(i )
 #     return output
-# print(common_fun(num1,num2))  
+# print(common_fun(num1,num2))
 
 
-##min and max function 
+##min and max function
 # n3 = [2,333,3,4,33,1,23]
 # print(max(n3)) ##prints maximum number
 # print(min(n3)) ##prints minimum number
@@ -236,7 +242,7 @@ num = list(range(1,11)) ##here list is pythons built in type
 
 
 ##exercise 6: make a function our input have how many list inside it
-# okay = [1,2,3,[1,2],['word'," "]] 
+# okay = [1,2,3,[1,2],['word'," "]]
 
 # def list_count(l):
 #     count = 0
@@ -248,5 +254,5 @@ num = list(range(1,11)) ##here list is pythons built in type
 
 
 ##sum()
-l = [22,33,11,45,8,21]
+l = [22, 33, 11, 45, 8, 21]
 print(sum(l))
